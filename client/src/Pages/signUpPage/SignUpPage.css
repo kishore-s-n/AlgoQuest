@@ -1,0 +1,107 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 50px);
+}
+
+.signup-card {
+  width: 400px; 
+  text-align: center;
+}
+
+.signup-title {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center; 
+}
+
+.signup-subtitle {
+  font-size: 1rem;
+  font-weight: 250;
+  color: #555;
+  margin-bottom: 17px;
+  width: 100%;
+  text-align: center; 
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: none;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.signup-input {
+  padding: 10px;
+  padding-left: 30px;
+  background-color: #d8d8d8;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: #000;
+  border: none;
+  width: 420px; 
+  height: 35px;
+}
+
+.forgot-password {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  margin-top: -5px; 
+  color: #ccc;
+}
+
+.forgot-password:hover {
+  color: #007bff;
+}
+
+.signup-button {
+  padding: 10px 20px;
+  width: 150px; 
+  background-color: #EBA22C;
+  font-weight: bolder;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem; 
+  transition: background-color 0.3s ease;
+  margin-top: 9px;
+  text-align: center; 
+}
+
+.signup-button:hover {
+  background-color: #d4941c;
+}
+
+.signup-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.or-text {
+  margin: 3px 0; 
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.signup-text {
+  text-decoration: underline;
+  font-size: 0.9rem;
+  color: #EBA22C;
+  padding: 0px 10px;
+}
+
+.signup-text:hover {
+  color: #d4941c;
+}
