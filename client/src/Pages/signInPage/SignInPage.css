@@ -1,0 +1,107 @@
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 50px);
+}
+
+.signin-card {
+  width: 400px; 
+  text-align: center;
+}
+
+.signin-title {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center; 
+}
+
+.signin-subtitle {
+  font-size: 1rem;
+  font-weight: 250;
+  color: #555;
+  margin-bottom: 17px;
+  width: 100%;
+  text-align: center; 
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: none;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.signin-input {
+  padding-left: 30px;
+  background-color: #d8d8d8;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: #000;
+  border: none;
+  width: 440px; 
+  height: 60px; 
+}
+
+.forgot-password {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  margin-top: -5px; 
+  color: #ccc;
+
+}
+
+.forgot-password:hover {
+  color: #007bff;
+}
+
+.signin-button {
+  padding: 10px 20px;
+  width: 150px; 
+  background-color: #EBA22C;
+  font-weight: bolder;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem; 
+  transition: background-color 0.3s ease;
+  margin-top: 5px; /* Reduced margin for tighter layout */
+  text-align: center; 
+}
+
+.signin-button:hover {
+  background-color: #d4941c;
+}
+
+.signin-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px; /* Reduced margin for tighter layout */
+}
+
+.or-text {
+  margin: 3px 0; /* Slightly reduced margin */
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.signin-text {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #EBA22C;
+  padding: 0px 10px;
+}
+
+.signin-text:hover {
+  color: #d4941c;
+}
