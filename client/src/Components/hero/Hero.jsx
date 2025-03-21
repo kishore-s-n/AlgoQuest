@@ -1,24 +1,25 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; 
-import './Hero.css';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./Hero.css";
+import logo from "./logo.png";
 
-
-const Hero = () => {
-  const navigate = useNavigate(); 
+const HomePage = () => {
+  const navigate = useNavigate();
 
   const handleStartClick = () => {
-    navigate('/signin');  // Replace '/nextpage' with the actual path you want to navigate to
+    navigate("/signin"); 
   };
 
   return (
-    <section className="hero">
-      <div className="hero-content">
-        <h1 className="hero-title">DSA BATTLE</h1>
-        <p className="hero-description">CODE, COMPILE AND CONQUER</p>
-        <button className="hero-button" onClick={handleStartClick}>Let's Start <span className="arrow">→</span></button>
-      </div>
-    </section>
+    <div className="container">
+      <img src={logo} alt="Algo Quest Logo" className="logo" />
+      <h2 className="sub-heading">DSA BATTLE</h2>
+      <p className="text">CODE, COMPILE AND CONQUER</p>
+      <button className="button" onClick={handleStartClick}>
+        Let’s Start
+      </button>
+    </div>
   );
 };
 
-export default Hero;
+export default HomePage;
