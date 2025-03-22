@@ -5,6 +5,7 @@ import Hero from './Components/hero/Hero';
 import SignInPage from './Pages/signInPage/SignInPage';
 import SignUpPage from './Pages/signUpPage/SignUpPage';
 import Levels from './Pages/levels/Levels';
+import CodingPage from './Pages/codingPage/CodingPage';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/levels" element={<Levels />} />
+        <Route path="/coding" element={<CodingPage />} />
       </Routes>
     </Router>
   );
