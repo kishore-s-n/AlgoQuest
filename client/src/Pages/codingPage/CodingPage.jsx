@@ -37,15 +37,18 @@ const CodingPage = () => {
     Split(['.left-panel', '.right-panel'], {
       sizes: [40, 60],
       minSize: 300,
-      gutterSize: 10,
+      gutterSize: 12,
+      gutterClassName: 'gutter-horizontal',
     });
-
+    
     Split(['.code-section', '.test-section'], {
       direction: 'vertical',
       sizes: [70, 30],
-      minSize: 200,
-      gutterSize: 10,
+      minSize: 100,
+      gutterSize: 12,
+      gutterClassName: 'gutter-vertical',
     });
+    
   }, []);
 
   return (
