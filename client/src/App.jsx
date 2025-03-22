@@ -4,6 +4,7 @@ import Navbar from './Components/navbar/Navbar';
 import Hero from './Components/hero/Hero'; 
 import SignInPage from './Pages/signInPage/SignInPage';
 import SignUpPage from './Pages/signUpPage/SignUpPage';
+import Levels from './Pages/levels/Levels';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/leaderboard" element={<div>Leaderboard Page</div>} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/levels" element={<Levels />} />
       </Routes>
     </Router>
   );

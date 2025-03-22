@@ -10,12 +10,12 @@
 }
 
 .signin-card {
-  width: 400px; 
+  width: 500px; 
   text-align: center;
 }
 
 .signin-title {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 1.5rem;
   font-weight: bold;
   color: #000;
@@ -26,9 +26,10 @@
   font-size: 1rem;
   font-weight: 250;
   color: #555;
-  margin-bottom: 17px;
+  margin-bottom: 20px;
   width: 100%;
   text-align: center; 
+  letter-spacing: 6.5px;
 }
 
 .signin-form {
@@ -36,19 +37,19 @@
   flex-direction: column;
   gap: 8px;
   border: none;
-  border-radius: 10px;
   align-items: center;
 }
 
 .signin-input {
+  padding: 10px;
   padding-left: 30px;
   background-color: #d8d8d8;
   border-radius: 10px;
   font-size: 0.8rem;
   color: #000;
   border: none;
-  width: 440px; 
-  height: 60px; 
+  width: 420px; 
+  height: 35px;
 }
 
 .forgot-password {
@@ -56,7 +57,7 @@
   font-size: 0.75rem;
   margin-top: -5px; 
   color: #ccc;
-
+  margin-right: 25px;
 }
 
 .forgot-password:hover {
@@ -74,7 +75,7 @@
   cursor: pointer;
   font-size: 1rem; 
   transition: background-color 0.3s ease;
-  margin-top: 5px; /* Reduced margin for tighter layout */
+  margin-top: 9px;
   text-align: center; 
 }
 
@@ -86,17 +87,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5px; /* Reduced margin for tighter layout */
+  margin-top: 5px;
 }
 
 .or-text {
-  margin: 3px 0; /* Slightly reduced margin */
+  margin: 3px 0; 
   font-size: 0.9rem;
   color: #000;
 }
 
 .signin-text {
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 0.9rem;
   color: #EBA22C;
   padding: 0px 10px;
@@ -104,4 +105,17 @@
 
 .signin-text:hover {
   color: #d4941c;
+}
+
+
+.forgot-password {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  margin-top: -5px; 
+  color: #ccc;
+
+}
+
+.forgot-password:hover {
+  color: #007bff;
 }

@@ -1,25 +1,25 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./Hero.css";
-import logo from "./logo.png";
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; 
+import './Hero.css';
 
-const HomePage = () => {
-  const navigate = useNavigate();
+const Hero = () => {
+  const navigate = useNavigate(); 
 
   const handleStartClick = () => {
-    navigate("/signin"); 
+    navigate('/signin');  
   };
 
   return (
-    <div className="container">
-      <img src={logo} alt="Algo Quest Logo" className="logo" />
-      <h2 className="sub-heading">DSA BATTLE</h2>
-      <p className="text">CODE, COMPILE AND CONQUER</p>
-      <button className="button" onClick={handleStartClick}>
-        Let’s Start
-      </button>
-    </div>
+    <section className="hero">
+      <div className="hero-content">
+        <p className="hero-subtitle">DSA BATTLE</p>
+        <p className="hero-description">CODE, COMPILE AND CONQUER</p>
+        <button className="hero-button" onClick={handleStartClick}>
+          Let’s Start <span className="arrow">→</span>
+        </button>
+      </div>
+    </section>
   );
 };
 
-export default HomePage;
+export default Hero;

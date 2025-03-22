@@ -10,12 +10,12 @@
 }
 
 .signup-card {
-  width: 400px; 
+  width: 600px; 
   text-align: center;
 }
 
 .signup-title {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 1.5rem;
   font-weight: bold;
   color: #000;
@@ -26,9 +26,10 @@
   font-size: 1rem;
   font-weight: 250;
   color: #555;
-  margin-bottom: 17px;
+  margin-bottom: 20px;
   width: 100%;
   text-align: center; 
+  letter-spacing: 6.5px;
 }
 
 .signup-form {
@@ -36,7 +37,6 @@
   flex-direction: column;
   gap: 8px;
   border: none;
-  border-radius: 10px;
   align-items: center;
 }
 

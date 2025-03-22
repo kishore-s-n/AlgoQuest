@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  z-index: 1;
+  font-weight: 400;
+  margin-left: -1000px;
+}
+
+.levels-container {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  align-items: center;
+  justify-content: center;
+}
+
+.levels {
+  display: flex;
+  width: 100%;
+  width: 1250px;
+  height: 125px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(122, 122, 122, 0.1);
+}
+
+.levels-label {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.levels-text {
+    width: 80%;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .levels-text p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+  }
+  
+
+/* Easy Card */
+.easy .levels-label {
+  background-color: #92FFAC;
+}
+
+.easy .levels-text {
+  background-color: #92FFAC4a;
+}
+
+/* Medium Card */
+.medium .levels-label {
+  background-color: #F6FF92;
+}
+
+.medium .levels-text {
+  background-color: #F6FF924a;
+}
+
+/* Hard Card */
+.hard .levels-label {
+  background-color: #FF9292;
+}
+
+.hard .levels-text {
+  background-color: #FF92924a;
+}
