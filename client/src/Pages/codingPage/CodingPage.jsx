@@ -4,10 +4,29 @@ import axios from 'axios';
 import Split from 'split.js';
 import './CodingPage.css';
 
+const Example = ({ input, output, description }) => {
+  return (
+    <div className="example">
+      <p><b>Input:</b> {input}</p>
+      <p><b>Output:</b> {output}</p>
+      <p><b>Description:</b> {description}</p>
+    </div>
+  );
+};
+
+const cases = {
+  case1: { nums: [1, 2, 2, 3, 3], expected_ans: 3 },
+  case2: { nums: [1, 1, 1, 1], expected_ans: 1 },
+  case3: { nums: [], expected_ans: 0 },
+  case4: { nums: [1, 2, 3, 4, 5], expected_ans: 5 },
+};
+
 const CodingPage = () => {
   const [code, setCode] = useState('// Write your code here...');
   const [language, setLanguage] = useState('java');
   const [output, setOutput] = useState('');
+  const [selectedCase, setSelectedCase] = useState(null);
+  const difficulty = 'Medium';
 
   const languageOptions = {
     java: 'java',
@@ -15,9 +34,16 @@ const CodingPage = () => {
     cpp: 'cpp',
   };
 
-  const handleCodeChange = (newCode) => {
-    setCode(newCode);
+  const getDifficultyClass = (level) => {
+    switch (level) {
+      case 'Easy': return 'easy';
+      case 'Medium': return 'medium';
+      case 'Hard': return 'hard';
+      default: return '';
+    }
   };
+
+  const handleCodeChange = (newCode) => setCode(newCode);
 
   const handleLanguageChange = (e) => {
     setLanguage(e.target.value);
@@ -33,38 +59,40 @@ const CodingPage = () => {
     }
   };
 
+  const handleCaseSelect = (caseKey) => {
+    setSelectedCase(caseKey);
+  };
+
   useEffect(() => {
-    Split(['.left-panel', '.right-panel'], {
-      sizes: [40, 60],
-      minSize: 300,
-      gutterSize: 12,
-      gutterClassName: 'gutter-horizontal',
-    });
-    
-    Split(['.code-section', '.test-section'], {
-      direction: 'vertical',
-      sizes: [70, 30],
-      minSize: 100,
-      gutterSize: 12,
-      gutterClassName: 'gutter-vertical',
-    });
-    
+    Split(['.left-panel', '.right-panel'], { sizes: [40, 60], minSize: 300, gutterSize: 12, gutterClassName: 'gutter-horizontal' });
+    Split(['.code-section', '.test-section'], { direction: 'vertical', sizes: [60, 40], minSize: 100, gutterSize: 12, gutterClassName: 'gutter-vertical' });
   }, []);
+
+  const examples = [
+    { input: 'nums = [1,1,2]', output: '[1,2]', description: 'Removes duplicates and returns unique values.' },
+    { input: 'nums = [0,0,1,1,1,2,2,3,3,4]', output: '[0,1,2,3,4]', description: 'Handles a larger array with multiple duplicates.' },
+    { input: 'nums = [2,7,11,15], target = 9', output: '[0,1]', description: 'Finds two numbers that sum up to the target.' }
+  ];
 
   return (
     <div className="container">
       <div className="split-container">
-        {/* Left Panel for Problem Statement */}
         <div className="left-panel">
-          <h2>Problem Title</h2>
-          <p>
-            Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-            You may assume that each input would have exactly one solution, and you may not use the same element twice.
+          <div className='title'>
+            <h3 className="problem-title">Remove Duplicates from Sorted Array</h3>
+            <span className={`difficulty ${getDifficultyClass(difficulty)}`}>{difficulty}</span>
+          </div>
+          <p className='description'>
+            Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Return the number of unique elements in nums.
           </p>
-          <p><b>Example:</b> nums = [2,7,11,15], target = 9 ➡ Output: [0,1]</p>
+          <div className='examples-section'>
+            <h4>Examples:</h4>
+            {examples.map((ex, index) => (
+              <Example key={index} input={ex.input} output={ex.output} description={ex.description} />
+            ))}
+          </div>
         </div>
 
-        {/* Right Panel with Code Editor and Output Section */}
         <div className="right-panel">
           <div className="code-section">
             <div className="header">
@@ -92,9 +120,22 @@ const CodingPage = () => {
 
           <div className="test-section">
             <div className="header">Output</div>
-            <div className="content">
+            {/* <div className="content">
               <pre>{output || 'Output will be displayed here...'}</pre>
+            </div> */}
+            <div className="case-buttons">
+              {Object.keys(cases).map((key) => (
+                <button key={key} onClick={() => handleCaseSelect(key)} className="case-btn">
+                  {key.toUpperCase()}
+                </button>
+              ))}
             </div>
+            {selectedCase && (
+              <div className="case-display">
+                <p><b>Input:</b> {JSON.stringify(cases[selectedCase].nums)}</p>
+                <p><b>Expected Answer:</b> {cases[selectedCase].expected_ans}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
